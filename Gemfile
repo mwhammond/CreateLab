@@ -15,6 +15,9 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+# forms
+gem "simple_form", "~> 3.0.0"
+
 # Auth gems
 gem "devise", "~> 3.1.1"
 gem "omniauth", "~> 1.1.4"
