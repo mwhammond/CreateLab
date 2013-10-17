@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  database: createlab_development
+  pool: 25
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password:
+
+test:
+  adapter: postgresql
+  database: createlab_test
+  pool: 25
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password:
+
+production:
+  adapter: postgresql
+  database: createlab
+  pool: 25
+  encoding: unicode
+  host: localhost
+  username: postgres
+  password:

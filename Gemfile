@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg', "~> 0.17.0"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -15,7 +15,13 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+# Auth gems
 gem "devise", "~> 3.1.1"
+gem "omniauth", "~> 1.1.4"
+gem "omniauth-facebook", "~> 1.4.1"
+gem "omniauth-twitter", "~> 1.0.1"
+gem "omniauth-google", "~> 1.0.2"
+gem "omniauth-github", "~> 1.1.1"
 
 # Assets
 gem "therubyracer"

@@ -17,3 +17,6 @@
 
 # Mac artifacts
 .DS_Store
+
+# db config
+/config/database.yml
