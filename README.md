@@ -1,4 +1,4 @@
-<img src="http://www.imperialcreatelab.com/LogoAdjacent.png" width="300" alt="Create Lab Logo">
+<img src="http://www.imperialcreatelab.com/LogoAdjacent.png" width="500" alt="Create Lab Logo">
 
 # Imperial Create Lab Website
 =========
