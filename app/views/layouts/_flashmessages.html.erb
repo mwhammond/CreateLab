@@ -1,3 +1,4 @@
+<div class="container">
 <% unless flash[:notice].blank? %>
  <div class="alert alert-success fade in">
    <a class="close" data-dismiss="alert" href="#">&times;</a>
@@ -6,7 +7,7 @@
 <% end %>
 
 <% unless flash[:error].blank? %>
- <div class="alert alert-error fade in">
+ <div class="alert alert-danger fade in">
    <a class="close" data-dismiss="alert" href="#">&times;</a>
    <%= content_tag :div, flash[:error] %>
    
@@ -14,8 +15,9 @@
 <% end %>
 
 <% unless flash[:alert].blank? %>
- <div class="alert alert-error fade in">
+ <div class="alert alert-danger fade in">
 <a class="close" data-dismiss="alert" href="#">&times;</a>
    <%= content_tag :div, flash[:alert] %>
  </div>
 <% end %>
+</div>

@@ -88,7 +88,6 @@ header .logo {
 }
 
 body {
-  background: #444;
   color: #444;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
@@ -448,10 +447,21 @@ ul#menu-main > li > a:focus {
 ============================================================ */
 
 /* === section header === */
+#navbarButtons {
+  margin-top: 35px;
+  position: relative;
+}
+
+#signinWindow {
+  float: none;
+  margin: 0 auto 0 auto;
+  border: 1px solid #e9e6e6;
+  border-radius: 10px;
+  padding: 25px;
+}
 
 #header-wrapper {
   height: 350px;
-  margin-top: -60px;
   padding-top: 160px;
   text-align: center;
   width: 100%;

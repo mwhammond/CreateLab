@@ -51,3 +51,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "better_errors", "~> 1.0.1"
