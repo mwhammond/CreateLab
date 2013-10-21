@@ -1,19 +1,25 @@
 <div class="container">
-    <h2>Sign up</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-		<%= f.input :first_name, :required => true, :class => "form-control", :autofocus => true %>
-		<%= f.input :last_name, :required => true %>
-		<%= f.input :role, collection: User::ROLES, prompt: false, :required => true %>
-    <%= f.input :email, :required => true %>
-    <%= f.input :password, :required => true %>
-    <%= f.input :password_confirmation, :required => true %>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up", :class => "btn-primary" %>
+  <div class="row">
+    <div class="col-lg-4" id="signinWindow">
+      <h2>Sign up</h2>
+  
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+  
+  		<%= f.input :first_name, :required => true, :class => "form-control", :autofocus => true %>
+  		<%= f.input :last_name, :required => true %>
+  		<%= f.input :role, collection: User::ROLES, prompt: false, :required => true %>
+      <%= f.input :email, :required => true %>
+      <%= f.input :password, :required => true %>
+      <%= f.input :password_confirmation, :required => true %>
+  
+    <div class="form-actions">
+    <br>
+      <%= f.button :submit, "Sign up", :class => "btn-primary" %>
+    </div>
+    <% end %>
+  
+    <%= render "devise/shared/links" %>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
