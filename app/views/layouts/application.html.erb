@@ -54,10 +54,11 @@
   <%= yield %>
 
 </body>
-
-<div id="footerSection">
-  <%= render "public/footer" %>
-</div>
+<footer>
+  <div id="footerSection">
+    <%= render "public/footer" %>
+  </div>
+</footer>
 
 <% if Rails.env.production? %>
   <script>
