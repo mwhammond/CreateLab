@@ -10,9 +10,23 @@
  *
  *= require_self
  *= require_tree .
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
  */
 @import "twitter/bootstrap";
 
 #eventImage{
   max-width: 100%;
+  border-radius: 5px 5px 0px 0px
+}
+#eventContent{
+  padding: 10px;
+}
+.box{
+  padding: 0px !important;
 }

@@ -1,59 +1,63 @@
 <div class="container">
   <h1>Listing events</h1>
-    <div class="row">
-      <% @events.each do |event| %>
-        <div class="col-lg-3 col-md-4 col-sm-6 eventBox">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-lg-12">
-                <img id="eventImage" src="http://placehold.it/400/200">
+    <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix masonry-brick">
+        <% @events.each do |event| %>
+          <div class="box col2 eventBox">
+              <div class="row">
+                <div class="col-lg-12">
+                  <img id="eventImage" src="http://placekitten.com/400/400">
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <h4 class="text-center"><%= link_to "#{event.title}", event %></h4>
+              <div id="eventContent">
+              <div class="row">
+                <div class="col-lg-12">
+                  <h4 class="text-center"><%= link_to "#{event.title}", event %></h4>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <%= event.starts_at %>
+              <div class="row">
+                <div class="col-lg-12">
+                  <%= event.starts_at %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <%= event.location %>
+              <div class="row">
+                <div class="col-lg-12">
+                  <%= event.location %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">    
-                <%= event.description %>
+              <div class="row">
+                <div class="col-lg-12">    
+                  <%= event.description %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <%= event.partner %>
+              <div class="row">
+                <div class="col-lg-12">
+                  <%= event.partner %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                Website URL <%= link_to event.external_url %>
+              <div class="row">
+                <div class="col-lg-12">
+                  Website URL <%= link_to event.external_url %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                Ticket URL <%= link_to event.ticket_url %>
+              <div class="row">
+                <div class="col-lg-12">
+                  Ticket URL <%= link_to event.ticket_url %>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <%= event.event_type %>
-                <%= link_to 'Edit', edit_event_path(event) %>
-                <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <div class="row">
+                <div class="col-lg-12">
+                  <%= event.event_type %>
+                </div>
               </div>
-            </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <%= link_to 'Edit', edit_event_path(event) %>
+                  <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              </div>
+              </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
     </div>
 </div>
 

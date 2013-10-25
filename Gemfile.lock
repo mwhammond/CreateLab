@@ -71,6 +71,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.0)
+      rails
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.1)
@@ -170,6 +172,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (~> 3.1.1)
   jquery-rails
+  masonry-rails
   omniauth (~> 1.1.4)
   omniauth-facebook (~> 1.4.1)
   omniauth-github (~> 1.1.1)

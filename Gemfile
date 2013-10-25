@@ -30,6 +30,7 @@ gem "omniauth-github", "~> 1.1.1"
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
+gem 'masonry-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
