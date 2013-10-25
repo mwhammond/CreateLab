@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Listing events</h1>
+  <h1>Events</h1>
+    <%= link_to 'New Event', new_event_path, :class =>'btn btn-success' %>
     <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix masonry-brick">
         <% @events.each do |event| %>
           <div class="box col2 eventBox">
