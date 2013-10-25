@@ -3,7 +3,8 @@ class EventsController < ApplicationController
 
   # GET /events
   def index
-    @events = Event.all
+    #@events = Event.all
+    @events = Event.all.sort_by {|event| event[:starts_at]}
   end
 
   # GET /events/1

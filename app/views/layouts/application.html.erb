@@ -24,13 +24,13 @@
   <!-- navbar collapse -->
     <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
     <ul class="nav navbar-nav" id="navbarButtons">
-      <li class="active"><a href="/root">Home</a></li>
-      <li><a href="http://forum.imperialcreatelab.com">Forum</a></li>
-      <li><a href="/events">Events</a></li>
-      <li><a href="/portfolio">Portfolio</a></li>
-      <li><a href="/users">Members</a></li>
-      <li><a href="#">Join in</a></li>
-      <li>
+      <li class="active text-center"><a href="/root">Home</a></li>
+      <li class="text-center"><a href="http://forum.imperialcreatelab.com">Forum</a></li>
+      <li class="text-center"><%= link_to("Events",events_path)%></li>
+      <li class="text-center"><a href="/portfolio">Portfolio</a></li>
+      <li class="text-center"><a href="/users">Members</a></li>
+      <li class="text-center"><a href="#">Join in</a></li>
+      <li class="text-center">
       <% if signed_in? %>
         <button class="btn btn-warning">
         <%= link_to(current_user.email, destroy_user_session_path)%>

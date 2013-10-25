@@ -1,41 +1,59 @@
-<h1>Listing events</h1>
+<div class="container">
+  <h1>Listing events</h1>
+    <div class="row">
+      <% @events.each do |event| %>
+        <div class="col-lg-3 col-md-4 col-sm-6 eventBox">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-lg-12">
+                <img id="eventImage" src="http://placehold.it/400/200">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <h4 class="text-center"><%= link_to "#{event.title}", event %></h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <%= event.starts_at %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <%= event.location %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">    
+                <%= event.description %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <%= event.partner %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                Website URL <%= link_to event.external_url %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                Ticket URL <%= link_to event.ticket_url %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <%= event.event_type %>
+                <%= link_to 'Edit', edit_event_path(event) %>
+                <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Starts at</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th>Partner</th>
-      <th>External url</th>
-      <th>Ticket url</th>
-      <th>Event type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.starts_at %></td>
-        <td><%= event.description %></td>
-        <td><%= event.location %></td>
-        <td><%= event.partner %></td>
-        <td><%= event.external_url %></td>
-        <td><%= event.ticket_url %></td>
-        <td><%= event.event_type %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
