@@ -1,3 +1,45 @@
+<%= form_for @event do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :starts_at %>
+    <%= f.datetime_select :starts_at %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :partner %>
+    <%= f.text_field :partner %>
+  </p>
+  <p>
+    <%= f.label :external_url %>
+    <%= f.text_field :external_url %>
+  </p>
+  <p>
+    <%= f.label :ticket_url %>
+    <%= f.text_field :ticket_url %>
+  </p>
+  <p>
+    <%= f.label :event_type %>
+    <%= f.text_field :event_type %>
+  </p>
+  <p>
+    <%= f.label :event_image %>
+    <%= f.file_field :event_image %>
+  </p>
+  
+  <p><%= f.button :submit, :class => 'btn btn-success' %></p>
+<% end %>
+
+<!--
 <%= simple_form_for(@event) do |f| %>
   <%= f.error_notification %>
 
@@ -11,8 +53,8 @@
     <%= f.input :ticket_url %>
     <%= f.input :event_type %>
   </div>
-
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn btn-success' %>
   </div>
 <% end %>
+-->

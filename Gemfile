@@ -26,11 +26,13 @@ gem "omniauth-twitter", "~> 1.0.1"
 gem "omniauth-google", "~> 1.0.2"
 gem "omniauth-github", "~> 1.1.1"
 
+#added for paperclip -Ben
+gem 'protected_attributes'
 # Assets
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
-gem 'masonry-rails'
+gem "paperclip", "~> 3.0"
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

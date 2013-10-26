@@ -10,13 +10,6 @@
  *
  *= require_self
  *= require_tree .
- *= require 'masonry/basic'
- *= require 'masonry/centered'
- *= require 'masonry/fluid'
- *= require 'masonry/gutters'
- *= require 'masonry/infinitescroll'
- *= require 'masonry/right-to-left'
- *= require 'masonry/transitions'
  */
 @import "twitter/bootstrap";
 
@@ -30,7 +23,10 @@
 .box{
   padding: 0px !important;
 }
-
+.item{
+  width: 275px;
+  height: 500px;
+}
 /* ----------------------------------- */
 /* Panel Colours */
 .greenPanel{
