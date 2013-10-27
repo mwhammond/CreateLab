@@ -13,19 +13,23 @@
  */
 @import "twitter/bootstrap";
 
-#eventImage{
+.eventImage{
   max-width: 200px;
   border-radius: 5px 5px 0px 0px
 }
-#eventContent{
+.eventTitle{
+  background-color: #85f57b;
+}
+.eventContent{
   padding: 10px;
 }
 .item{
-  background-color: #d2d2d2;
+  position: relative;
+  background-color: #e9e6e6;
   width: 200px;
   margin-bottom: 50px;
   height: 400px;
-  border-radius: 5px 5px 5px 5px
+  border-radius: 5px 5px 5px 5px;
 }
 
 /* 4 columns by default */
