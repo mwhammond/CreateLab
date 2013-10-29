@@ -1,4 +1,6 @@
 Createlab::Application.routes.draw do
+  resources :portfolios, path: "portfolio"
+
   resources :events
 
   devise_for :users

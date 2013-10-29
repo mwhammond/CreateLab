@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025210504) do
+ActiveRecord::Schema.define(version: 20131029175009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,22 @@ ActiveRecord::Schema.define(version: 20131025210504) do
     t.string   "event_image_content_type"
     t.integer  "event_image_file_size"
     t.datetime "event_image_updated_at"
+  end
+
+  create_table "portfolios", force: true do |t|
+    t.string   "company_name"
+    t.text     "bio"
+    t.date     "founded_date"
+    t.integer  "amount_raised"
+    t.integer  "valuation"
+    t.string   "currency"
+    t.string   "status"
+    t.string   "contact_name"
+    t.string   "contact_email"
+    t.string   "contact_number"
+    t.string   "industry_sector"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

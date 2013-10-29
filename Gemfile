@@ -26,10 +26,7 @@ gem "omniauth-twitter", "~> 1.0.1"
 gem "omniauth-google", "~> 1.0.2"
 gem "omniauth-github", "~> 1.1.1"
 
-#added for paperclip -Ben
-gem 'protected_attributes'
 # Assets
-
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
 gem "paperclip", "~> 3.0"
