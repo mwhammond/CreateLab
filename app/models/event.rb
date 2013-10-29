@@ -6,4 +6,3 @@ class Event < ActiveRecord::Base
                     :path => ":rails_root/app/assets/images/event_images/:id/:style_:basename.:extension",
                     :url => "/assets/event_images/:id/:style_:basename.:extension"
 end
-
