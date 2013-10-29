@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Imperial Create Lab - student innovation and entrepreneurship at Imperial College London</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,7 +20,7 @@
       <%= image_tag "LogoAdjacent.png", title: "Imperial Create Lab", width: "200"%>
     </a>
   </div>
-  
+
   <!-- navbar collapse -->
   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
     <ul class="nav navbar-nav" id="navbarButtons">
@@ -44,7 +44,7 @@
         </button>
       <% end %>
       </li>
-    </ul>        
+    </ul>
   </div>   <!-- /navbar collapse -->
 </nav> <!-- /navbar -->
 
