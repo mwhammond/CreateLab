@@ -1,0 +1,31 @@
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_ame %>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+  </p>
+  <p>
+    <%= f.label :team %>
+    <%= f.check_box :team %>
+  </p>
+  <p>
+    <%= f.label :mentor %>
+    <%= f.check_box :mentor %>
+  </p>
+  <p>
+    <%= f.label :admin %>
+    <%= f.check_box :admin %>
+  </p>
+  <p><%= f.button :submit, :class => 'btn btn-success' %></p>
+<% end %>

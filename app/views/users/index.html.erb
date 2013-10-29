@@ -1,7 +1,46 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="container">
+<h1>Users</h1>
 
-<% @users.each do |user| %>
-  <%=user.first_name%>
-  <%=user.last_name%>
-<%end%>
+<p>All users</p>
+
+<table class="table table-striped">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>email</th>
+    <th>Enrollment Date</th>
+    <th>Department</th>
+    <th>Create Lab Team?</th>
+    <th>Mentor?</th>
+    <th>Admin?</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td>
+      <%=user.first_name%>
+    </td>
+    <td>
+      <%=user.last_name%>
+    </td>
+    <td>
+      <%=user.email%>
+    </td>
+    <td>
+      <%=user.enrollment_date%>
+    </td>
+    <td>
+      <%=user.department%>
+    </td>
+    <td>
+      <%=user.team%>
+    </td>
+    <td>
+      <%=user.mentor%>
+    </td>
+    <td>
+      <%=user.admin%>
+    </td>
+  </tr>
+    <%end%>
+</table>
+</div>
