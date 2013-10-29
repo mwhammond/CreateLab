@@ -1,5 +1,5 @@
 Createlab::Application.routes.draw do
-  resources :portfolios, path: "portfolio"
+  resources :portfolios
 
   resources :events
 

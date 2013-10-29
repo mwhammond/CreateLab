@@ -4,6 +4,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios
   def index
     @portfolios = Portfolio.all
+    @promoted = @portfolios.where(promoted: true)
   end
 
   # GET /portfolios/1
@@ -53,6 +54,6 @@ class PortfoliosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def portfolio_params
-      params.require(:portfolio).permit(:company_name, :bio, :founded_date, :amount_raised, :valuation, :currency, :status, :contact_name, :contact_email, :contact_number, :industry_sector)
+      params.require(:portfolio).permit(:company_name, :bio, :founded_date, :amount_raised, :valuation, :currency, :status, :contact_name, :contact_email, :contact_number, :industry_sector, :logo, :promoted)
     end
 end

@@ -1,4 +1,4 @@
-<%= simple_form_for(@portfolio, url: portfolios_path) do |f| %>
+<%= simple_form_for(@portfolio) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -12,6 +12,8 @@
     <%= f.input :contact_email %>
     <%= f.input :contact_number %>
     <%= f.input :industry_sector %>
+    <%= f.input :logo %>
+    <%= f.input :promoted %>
   </div>
 
   <div class="form-actions">
