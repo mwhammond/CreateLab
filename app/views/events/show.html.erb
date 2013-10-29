@@ -40,9 +40,9 @@
   <%= @event.event_type %>
 </p>
 
-<%= image_tag @event.event_image.url %>
-<%= image_tag @event.event_image.url(:medium) %>
-<%= image_tag @event.event_image.url(:thumb) %>
+<%= image_tag @event.image.url %>
+<%= image_tag @event.image.url(:medium) %>
+<%= image_tag @event.image.url(:thumb) %>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
