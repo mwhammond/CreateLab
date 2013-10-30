@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029195714) do
+ActiveRecord::Schema.define(version: 20131030163753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 20131029195714) do
     t.integer  "event_image_file_size"
     t.datetime "event_image_updated_at"
   end
+
+  create_table "jobs", force: true do |t|
+    t.integer  "portfolio_id"
+    t.string   "job_title"
+    t.text     "job_description"
+    t.text     "skills"
+    t.string   "contact_email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "jobs", ["portfolio_id"], name: "index_jobs_on_portfolio_id", using: :btree
 
   create_table "portfolios", force: true do |t|
     t.string   "company_name"

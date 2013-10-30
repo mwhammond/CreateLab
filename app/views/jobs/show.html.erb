@@ -1,0 +1,32 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <%= @job.job_title %>
+</h2>
+
+<p>
+  <strong>Company:</strong>
+  <%= @job.portfolio.company_name %>
+</p>
+
+<p>
+  <strong>Job description:</strong>
+  <%= @job.job_description %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @job.skills %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @job.contact_email %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
+
+</div>

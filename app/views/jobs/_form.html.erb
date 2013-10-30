@@ -1,0 +1,15 @@
+<%= simple_form_for(@job) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :portfolio, label: 'Portfolio Company', label_method: :company_name, value_method: :id, include_blank: false %>
+    <%= f.input :job_title %>
+    <%= f.input :job_description %>
+    <%= f.input :skills %>
+    <%= f.input :contact_email %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<div class="container">
+
+<h1>Jobs Board</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company</th>
+      <th>Job title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.portfolio.company_name %></td>
+        <td><%= job.job_title %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>
