@@ -29,3 +29,6 @@ This repo will follow the **[GitHub style guide](https://github.com/styleguide)*
 
 ##Maintainers
 This project is maintained by **[Mark Hammond](https://github.com/mwhammond)**, **[Ben Miles](https://github.com/bmiles)**, **[Nick Davies](https://github.com/nicktdavies)** and **[James Harker](https://github.com/jamesharker)**
+
+##Licence
+This repository is made public under the GNU v2 licence detailed in the LICENCE file above.
