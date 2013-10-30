@@ -27,10 +27,7 @@ ActiveRecord::Schema.define(version: 20131030163753) do
     t.string   "event_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "event_image_file_name"
-    t.string   "event_image_content_type"
-    t.integer  "event_image_file_size"
-    t.datetime "event_image_updated_at"
+    t.string   "image"
   end
 
   create_table "jobs", force: true do |t|

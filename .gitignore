@@ -20,3 +20,5 @@
 
 # db config
 /config/database.yml
+.env.development
+public/uploads/

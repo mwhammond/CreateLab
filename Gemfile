@@ -29,11 +29,10 @@ gem "omniauth-github", "~> 1.1.1"
 # Assets
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
-gem "paperclip", "~> 3.0"
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
+# Image uploading
+gem "carrierwave", "~> 0.9.0"
+gem "cloudinary", "~> 1.0.64"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -52,4 +51,10 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "better_errors", "~> 1.0.1"
+# Environment variables
+gem "dotenv", "~> 0.9.0"
+
+group :development do
+  gem "binding_of_caller"
+  gem "better_errors", "~> 1.0.1"
+end

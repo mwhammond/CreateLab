@@ -1,65 +1,47 @@
 <div class="container">
   <h1>Events</h1>
-    <%= link_to 'New Event', new_event_path, :class =>'btn btn-success' %>
-    <div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 50, "gutter": 25 }'>
-        <div class="grid-sizer"></div>
-        <% @events.each do |event| %>
-          <div class="item eventBox">
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= image_tag event.event_image.url(:medium), :class => "eventImage" %>
-                </div>
-              </div>
-              <div class="eventContent">
-              <div class="row eventTitle">
-                <div class="col-lg-12">
-                  <h4 class="text-center"><%= link_to "#{event.title}", event %></h4>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= event.starts_at %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= event.location %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">    
-                  <%= event.description %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= event.partner %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  Website URL <%= link_to event.external_url %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  Ticket URL <%= link_to event.ticket_url %>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= event.event_type %>
-                </div>
-              </div>               
-              <div class="row">
-                <div class="col-lg-12">
-                  <%= link_to 'Edit', edit_event_path(event) %>
-                  <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </div>
-              </div>
-              </div>
-          </div> <!-- /masonryitem -->
+  <%= link_to 'New Event', new_event_path, :class =>'btn btn-success' %>
+  <% @events.in_groups_of(4).each do |event_array| %>
+    <div class="row show-grid">
+      <% event_array.each do |event| %>
+        <% if event %>
+          <div class="col-md-3">
+            <div>
+              <%= image_tag event.image.url(:medium), :class => "eventImage" %>
+            </div>
+            <div>
+              <%= link_to "#{event.title}", event %>
+            </div>
+            <div>
+              <%= event.starts_at %>
+            </div>
+            <div>
+              <%= event.location %>
+            </div>
+            <div>
+              <%= event.description %>
+            </div>
+            <div>
+              <%= event.partner %>
+            </div>
+            <div>
+              Website URL <%= link_to event.external_url %>
+            </div>
+            <div>
+              Ticket URL <%= link_to event.ticket_url %>
+            </div>
+            <div>
+              <%= event.event_type %>
+            </div>
+            <div>
+              <%= link_to 'Edit', edit_event_path(event) %>
+            </div>
+            <div>
+              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+          </div>
         <% end %>
-    </div> <!-- /masonrycontainer -->
+      <% end %>
+    </div>
+  <% end %>
 </div>
-
