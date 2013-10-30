@@ -20,8 +20,8 @@ You can setup the database by running `rake db:create` followed by `rake db:sche
 
 Finally run `rails s` to fire up a rails server!
 
-## Envrioment Variables
-Duplicate the `.env.sample` file and name it `.env.development` then either ask one of the maintaners for a set of keys or enter your own.
+## Environment Variables
+Duplicate the `.env.sample` file and name it `.env.development` then either ask one of the maintainers for a set of keys or enter your own.
 
 
 ## Style Guide
