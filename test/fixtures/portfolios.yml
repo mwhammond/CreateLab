@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_name: MyString
+  bio: MyText
+  founded_date: 2013-10-29
+  amount_raised: 1
+  valuation: 1
+  currency: MyString
+  status: MyString
+  contact_name: MyString
+  contact_email: MyString
+  contact_number: MyString
+  industry_sector: MyString
+
+two:
+  company_name: MyString
+  bio: MyText
+  founded_date: 2013-10-29
+  amount_raised: 1
+  valuation: 1
+  currency: MyString
+  status: MyString
+  contact_name: MyString
+  contact_email: MyString
+  contact_number: MyString
+  industry_sector: MyString

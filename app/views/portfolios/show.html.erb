@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @portfolio.company_name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @portfolio.bio %>
+</p>
+
+<p>
+  <strong>Founded date:</strong>
+  <%= @portfolio.founded_date %>
+</p>
+
+<p>
+  <strong>Amount raised:</strong>
+  <%= @portfolio.amount_raised %>
+</p>
+
+<p>
+  <strong>Valuation:</strong>
+  <%= @portfolio.valuation %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @portfolio.currency %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @portfolio.status %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @portfolio.contact_name %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @portfolio.contact_email %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @portfolio.contact_number %>
+</p>
+
+<p>
+  <strong>Industry sector:</strong>
+  <%= @portfolio.industry_sector %>
+</p>
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+<%= link_to 'Back', portfolios_path %>

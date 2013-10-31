@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  portfolio_id: 
+  job_title: MyString
+  job_description: MyText
+  skills: MyText
+  contact_email: MyString
+
+two:
+  portfolio_id: 
+  job_title: MyString
+  job_description: MyText
+  skills: MyText
+  contact_email: MyString

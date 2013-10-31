@@ -1,0 +1,53 @@
+<div class="container">
+
+<h1>Portfolio</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Bio</th>
+      <th>Founded date</th>
+      <th>Amount raised</th>
+      <th>Valuation</th>
+      <th>Status</th>
+      <th>Contact name</th>
+      <th>Contact email</th>
+      <th>Contact number</th>
+      <th>Industry sector</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portfolios.each do |portfolio| %>
+      <tr>
+        <td><%= portfolio.company_name %></td>
+        <td><%= portfolio.bio %></td>
+        <td><%= portfolio.founded_date %></td>
+        <td><%= portfolio.amount_raised %></td>
+        <td><%= portfolio.valuation %></td>
+        <td><%= portfolio.status %></td>
+        <td><%= portfolio.contact_name %></td>
+        <td><%= portfolio.contact_email %></td>
+        <td><%= portfolio.contact_number %></td>
+        <td><%= portfolio.industry_sector %></td>
+        <td><%= link_to 'Show', portfolio %></td>
+        <td><%= link_to 'Edit', edit_portfolio_path(portfolio) %></td>
+        <td><%= link_to 'Destroy', portfolio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_portfolio_path %>
+
+<h2>Total Raised</h2>
+<h3><%= number_to_currency(@portfolios.sum(:amount_raised), :unit => "&pound;") %></h3>
+</div>
+
+<br>

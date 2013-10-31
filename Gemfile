@@ -27,7 +27,6 @@ gem "omniauth-google", "~> 1.0.2"
 gem "omniauth-github", "~> 1.1.1"
 
 # Assets
-
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
 

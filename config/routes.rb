@@ -1,4 +1,8 @@
 Createlab::Application.routes.draw do
+  resources :jobs
+
+  resources :portfolios
+
   resources :events
 
   devise_for :users
