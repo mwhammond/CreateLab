@@ -13,5 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require masonry.pkgd
+//= require jquery.isotope.min
 //= require_tree .

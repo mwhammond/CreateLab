@@ -1,3 +1,24 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.isotopeItem{
+  background-color: #e8e5e5;
+  margin: 12px;
+  position: absolute; 
+  left: 0px; 
+  top: 0px;
+/*   max-height: 400px; */
+}
+
+.eventTitle{
+/*   background color is set with erb depending on event type. */
+  a {
+    color:white;
+  }
+  color: white;
+  padding: 10px;
+}
+.eventContent{
+  padding: 10px;
+}

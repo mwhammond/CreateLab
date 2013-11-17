@@ -12,28 +12,15 @@
  *= require_tree .
  */
 @import "twitter/bootstrap";
+@import "navbar";
 @import "panelStyles";
-.eventImage{
-  max-width: 200px;
-  border-radius: 5px 5px 0px 0px
-}
-.eventTitle{
-  background-color: #85f57b;
-}
-.eventContent{
-  padding: 10px;
-}
-.item{
-  position: relative;
-  background-color: #e9e6e6;
-  width: 200px;
-  margin-bottom: 50px;
-  height: 400px;
-  border-radius: 5px 5px 5px 5px;
-}
+@import "isotope";
+@import "carousel";
 
-/* 4 columns by default */
-
-/* .grid-sizer { width: 20%; } */
-
-/* ----------------------------------- */
+#joinin {
+  height: 100px;
+  padding: 25px;
+}
+#howitworks {
+  padding: 25px;
+}

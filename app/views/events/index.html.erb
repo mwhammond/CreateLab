@@ -1,25 +1,52 @@
 <div class="container">
-  <h1>Events</h1>
-  <%= link_to 'New Event', new_event_path, :class =>'btn btn-success' %>
-  <% @events.in_groups_of(4).each do |event_array| %>
-    <div class="row show-grid">
-      <% event_array.each do |event| %>
-        <% if event %>
-          <div class="col-md-3">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Coming up</h1>
+      <h1><small>We host events from CEO talks to web, development courses and we also bring together partner events like SVC2I, Ctrl/Alt/Change so that you do't miss out.
+      </small>
+      </h1>
+    </div>
+    <div class="col-lg-4 col-lg-offset-2">
+      <h3>Sign-up for a weekly update.</h3>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="row">
+    <div class="btn-group" data-toggle="buttons" id="filters">
+      <label class="btn btn-primary">
+        <input type="radio" name="options" class="filterBtn"  id="all" data-filter="*"> Show all
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" class="filterBtn" id="meet" data-filter=".meetup"> Meetup
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" class="filterBtn" id="skill" data-filter=".skills"> Skill-up
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" class="filterBtn" id="start" data-filter=".startup"> Start-up
+      </label>
+    </div>  
+      
+    <div id="container">
+      <% @events.each do |event| %>
+        <div class="isotopeItem <%=event.event_type%>" style="background-image: url(<%= event.image.url(:medium)%>)">
+          <div class="eventTitle" style="background-color: #3CB9CD">
             <div>
-              <%= image_tag event.image.url(:medium), :class => "eventImage" %>
+              <h3><%= link_to "#{event.title}", event %></h3>
             </div>
             <div>
-              <%= link_to "#{event.title}", event %>
+              <h5><%= event.starts_at %></h5>
             </div>
-            <div>
-              <%= event.starts_at %>
-            </div>
-            <div>
+          </div>
+          <div class="eventContent">
+            <!--
+<div>
               <%= event.location %>
             </div>
             <div>
-              <%= event.description %>
+              <%= event.description[0..140] %>
             </div>
             <div>
               <%= event.partner %>
@@ -39,9 +66,29 @@
             <div>
               <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
+-->
           </div>
-        <% end %>
+        </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
+<script>
+  var $container = $('#container');
+  // initialize isotope
+  $container.isotope({
+    // options...
+    itemSelector : '.isotopeItem',
+    masonry: {
+    columnWidth: 240
+    }    
+  });
+  // filter items when filter link is clicked
+  $('#filters > label').click(function(){
+    console.log("hello");
+    var selector = $(this).children().attr('data-filter');
+    $container.isotope({ filter: selector });
+    console.log(selector);
+    return false;
+  });
+</script>
