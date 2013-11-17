@@ -1,9 +1,13 @@
 /* Nav Bar Styles */
 
 .navbar {
+  padding: auto 0 auto 0;
   a {
   color: white;
   }
   border: none;
   border-radius: none;
+}
+.navbar-right{
+  padding-top: 35px;
 }
