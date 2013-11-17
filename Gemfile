@@ -55,6 +55,6 @@ end
 gem "dotenv", "~> 0.9.0"
 
 group :development do
-  gem "binding_of_caller"
   gem "better_errors", "~> 1.0.1"
+  gem "binding_of_caller", "~> 0.7.1"
 end

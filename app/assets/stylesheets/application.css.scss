@@ -12,7 +12,7 @@
  *= require_tree .
  */
 @import "twitter/bootstrap";
-
+@import "panelStyles";
 .eventImage{
   max-width: 200px;
   border-radius: 5px 5px 0px 0px
@@ -37,16 +37,3 @@
 /* .grid-sizer { width: 20%; } */
 
 /* ----------------------------------- */
-/* Panel Colours */
-.greenPanel{
-  background-color: #46CB78;
-}
-.bluePanel{
-  background-color: #005F7E;
-}
-.redPanel{
-  background-color: #F04E37;
-}
-.yellowPanel{
-  background-color: #FFCB05;
-}
