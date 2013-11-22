@@ -12,7 +12,6 @@
   </div>
   
   <hr>
-  
   <div class="row">
     <div class="btn-group" data-toggle="buttons" id="filters">
       <label class="btn btn-primary">
@@ -31,8 +30,11 @@
       
     <div id="container">
       <% @events.each do |event| %>
-        <div class="isotopeItem <%=event.event_type%>" style="background-image: url(<%= event.image.url(:medium)%>)">
-          <div class="eventTitle" style="background-color: #3CB9CD">
+        <div class="isotopeItem <%=event.event_type%>" >
+          <div>
+            <img src="<%= event.image.url(:medium)%>">
+          </div>
+          <div class="eventTitle titlebackground<%=event.event_type%>">
             <div>
               <h3><%= link_to "#{event.title}", event %></h3>
             </div>
@@ -79,9 +81,11 @@
   $container.isotope({
     // options...
     itemSelector : '.isotopeItem',
-    masonry: {
-    columnWidth: 240
-    }    
+    /*
+masonry: {
+    columnWidth: 120
+    }  
+*/  
   });
   // filter items when filter link is clicked
   $('#filters > label').click(function(){

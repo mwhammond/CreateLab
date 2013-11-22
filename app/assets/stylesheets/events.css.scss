@@ -5,15 +5,14 @@
 .isotopeItem{
   background-color: #e8e5e5;
   margin: 12px;
-  position: absolute; 
-  left: 0px; 
-  top: 0px;
 /*   max-height: 400px; */
 }
 
 .eventTitle{
-/*   background color is set with erb depending on event type. */
-  a {
+  position: absolute;
+  left: 0px; 
+  bottom: 0px;
+    a {
     color:white;
   }
   color: white;
@@ -22,3 +21,17 @@
 .eventContent{
   padding: 10px;
 }
+
+.titlebackground{
+    background-color: #3CB9CD;
+}
+.titlebackgroundskills{
+    background-color: #F04E37;
+}
+.titlebackgroundmeetup{
+    background-color: #FFCB05;
+}
+.titlebackgroundstartup{
+    background-color: #46CB78;
+}
+
