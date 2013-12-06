@@ -9,11 +9,8 @@
 <body>
 
 <%= render "layouts/navbar" %>
-
-<br>
-	<%= render "layouts/flashmessages" %>
-<br>
-  <%= yield %>
+<!-- <%= render "layouts/flashmessages" %> this is commented out as it was creating white space between the nav and the carousel -->
+<%= yield %>
 
 </body>
 <footer>

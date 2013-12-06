@@ -1,13 +1,21 @@
 /* Nav Bar Styles */
 
 .navbar {
-  padding: auto 0 auto 0;
+  padding: auto auto auto auto;
   a {
-  color: white;
+    color: white !important;   
   }
   border: none;
-  border-radius: none;
+  margin: auto 0px auto 0px !important;
 }
+.navbar-nav .navbar-inverse{
+  }
 .navbar-right{
   padding-top: 35px;
+}
+.active {
+  a{
+    background-color:#182655 !important;
+    border-radius: 23px;
+  };
 }
