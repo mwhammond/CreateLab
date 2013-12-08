@@ -12,31 +12,35 @@
     </div>
   </div>
   <div class="row">
-    <% if signed_in? %>
-      <% if current_user.admin %>
-        <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
+    <div class="col-lg-12">
+      <% if signed_in? %>
+        <% if current_user.admin %>
+          <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
+        <% end %>
+      <% else %>
+        <%= link_to("Sign-in",new_user_session_path, :class => "btn btn-warning")%>
       <% end %>
-    <% else %>
-      <%= link_to("Sign-in",new_user_session_path, :class => "btn btn-warning")%>
-    <% end %>
+    </div>
   </div>
   
   <hr>
   <div class="row">
-    <div class="btn-group" data-toggle="buttons" id="filters">
-      <label class="btn btn-primary">
-        <input type="radio" name="options" class="filterBtn"  id="all" data-filter="*"> Show all
-      </label>
-      <label class="btn btn-primary">
-        <input type="radio" name="options" class="filterBtn" id="meet" data-filter=".meetup"> Meetup
-      </label>
-      <label class="btn btn-primary">
-        <input type="radio" name="options" class="filterBtn" id="skill" data-filter=".skills"> Skill-up
-      </label>
-      <label class="btn btn-primary">
-        <input type="radio" name="options" class="filterBtn" id="start" data-filter=".startup"> Start-up
-      </label>
-    </div>  
+    <div class="col-lg-12">
+      <div class="btn-group" data-toggle="buttons" id="filters">
+        <label class="btn btn-primary">
+          <input type="radio" name="options" class="filterBtn"  id="all" data-filter="*"> Show all
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" class="filterBtn" id="meet" data-filter=".meetup"> Meetup
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" class="filterBtn" id="skill" data-filter=".skills"> Skill-up
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" class="filterBtn" id="start" data-filter=".startup"> Start-up
+        </label>
+      </div>  
+    </div>
       
     <div id="container">
       <% @events.each do |event| %>

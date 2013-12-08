@@ -1,48 +1,58 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Partner:</strong>
-  <%= @event.partner %>
-</p>
-
-<p>
-  <strong>External url:</strong>
-  <%= @event.external_url %>
-</p>
-
-<p>
-  <strong>Ticket url:</strong>
-  <%= @event.ticket_url %>
-</p>
-
-<p>
-  <strong>Event type:</strong>
-  <%= @event.event_type %>
-</p>
-
-<%= image_tag @event.image.url %>
-<%= image_tag @event.image.url(:medium) %>
-<%= image_tag @event.image.url(:thumb) %>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<div class="showEventPage">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <%= image_tag @event.image.url(:medium), :class => "img-circle eventImage"%>
+      <div class="row">
+          <div class="col-lg-12">
+            <h1><%= @event.title %></h1>
+          </div>
+      </div>    
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Starts at:</h2>
+          <%= @event.starts_at %>
+        </div>
+        <div class="col-lg-6">
+          <h2>Location:</h2>
+          <%= @event.location %>
+        </div>
+      </div>
+      <div class="row"> <!-- links -->
+        <div class="col-lg-6">
+          <span class="glyphicon glyphicon-link"></span> <%=link_to(@event.external_url) %>
+          <br>
+          <span class="glyphicon glyphicon-qrcode"></span> <%= link_to(@event.ticket_url) %>
+        </div>
+        <div class="col-lg-6">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Partner:</h2>
+          <%= @event.partner %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Description:</h2>
+          <%= @event.description %>
+        </div>
+      </div>
+    
+        
+      <p>
+        <h2>Event type:</h2>
+        <%= @event.event_type %>
+      </p>
+      
+      <%= image_tag @event.image.url %>
+      <%= image_tag @event.image.url(:medium) %>
+      <%= image_tag @event.image.url(:thumb) %>
+      
+      <%= link_to 'Edit', edit_event_path(@event) %> |
+      <%= link_to 'Back', events_path %>
+    </div>
+  </div>
+</div>
