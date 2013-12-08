@@ -11,6 +11,15 @@
       <%= render "public/join_in" %>
     </div>
   </div>
+  <div class="row">
+    <% if signed_in? %>
+      <% if current_user.admin %>
+        <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
+      <% end %>
+    <% else %>
+      <%= link_to("Sign-in",new_user_session_path, :class => "btn btn-warning")%>
+    <% end %>
+  </div>
   
   <hr>
   <div class="row">

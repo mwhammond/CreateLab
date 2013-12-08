@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  before_action :verify_is_admin, only:[:create, :new, :edit, :update, :destroy]
+  
+  
   def index
     @events = Event.order("starts_at ASC")
   end
@@ -39,6 +41,10 @@ class EventsController < ApplicationController
   end
 
   private
+    def verify_is_admin
+      (current_user.nil?) ? redirect_to(events_path) : (redirect_to(root_path) unless current_user.admin?)
+    end
+
     def set_event
       @event = Event.find(params[:id])
     end
