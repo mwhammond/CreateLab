@@ -41,18 +41,11 @@
           <%= @event.description %>
         </div>
       </div>
-    
-        
-      <p>
-        <h2>Event type:</h2>
-        <%= @event.event_type %>
-      </p>
       <% if current_user.admin %>
+        <%= link_to 'Edit', edit_event_path(@event) %>
         <%= image_tag @event.image.url %>
         <%= image_tag @event.image.url(:medium) %>
         <%= image_tag @event.image.url(:thumb) %>
-        
-        <%= link_to 'Edit', edit_event_path(@event) %>
       <% end %>
     </div>
   </div>
