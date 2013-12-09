@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-lg-6">
           <h2>Starts at:</h2>
-          <%= @event.starts_at %>
+          <%= @event.starts_at.to_s(:pretty) %>
         </div>
         <div class="col-lg-6">
           <h2>Location:</h2>
