@@ -53,36 +53,8 @@
               <h3><%= link_to "#{event.title}", event %></h3>
             </div>
             <div>
-              <h5><%= event.starts_at %></h5>
+              <h5><%= event.starts_at.to_s(:pretty) %></h5>
             </div>
-          </div>
-          <div class="eventContent">
-            <!--
-<div>
-              <%= event.location %>
-            </div>
-            <div>
-              <%= event.description[0..140] %>
-            </div>
-            <div>
-              <%= event.partner %>
-            </div>
-            <div>
-              Website URL <%= link_to event.external_url %>
-            </div>
-            <div>
-              Ticket URL <%= link_to event.ticket_url %>
-            </div>
-            <div>
-              <%= event.event_type %>
-            </div>
-            <div>
-              <%= link_to 'Edit', edit_event_path(event) %>
-            </div>
-            <div>
-              <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </div>
--->
           </div>
         </div>
       <% end %>

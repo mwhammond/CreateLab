@@ -1,1 +1,10 @@
 //This is the sass style sheet for the footer to imported where ever.
+@import 'colors';
+.footerText {
+padding: 10px 0 10px 0;
+}
+.greyPanel{
+  p {
+    color: $clouds;
+  }
+}
