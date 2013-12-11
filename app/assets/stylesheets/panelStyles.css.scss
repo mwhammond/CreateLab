@@ -1,5 +1,5 @@
 /* Panel Colours */
-
+@import "colors";
 .greenPanel{
   background-color: #46CB78;
 }
@@ -14,6 +14,10 @@
   background-color: #FFCB05;
 }
 .blackPanel{
-  background-color: black;
-  color: white;
+  background-color: $midnightBlue;
+  color: $clouds;
+}
+.greyPanel{
+  background-color: $silver;
+/*   color: ; */
 }

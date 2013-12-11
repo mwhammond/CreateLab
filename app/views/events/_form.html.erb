@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.label :location %>
@@ -29,7 +29,7 @@
   </p>
   <p>
     <%= f.label :event_type %>
-    <%= f.text_field :event_type %>
+    <%= select(:event, :event_type, [['Startup', 'startup'], ['Skills', 'skills'], ['Meet-up', 'meetup']]) %>  
   </p>
   <p>
     <%= f.label :image %>

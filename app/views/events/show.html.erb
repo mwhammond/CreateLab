@@ -1,48 +1,52 @@
 <p id="notice"><%= notice %></p>
+<div class="showEventPage">
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Starts at:</strong>
-  <%= @event.starts_at %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Partner:</strong>
-  <%= @event.partner %>
-</p>
-
-<p>
-  <strong>External url:</strong>
-  <%= @event.external_url %>
-</p>
-
-<p>
-  <strong>Ticket url:</strong>
-  <%= @event.ticket_url %>
-</p>
-
-<p>
-  <strong>Event type:</strong>
-  <%= @event.event_type %>
-</p>
-
-<%= image_tag @event.image.url %>
-<%= image_tag @event.image.url(:medium) %>
-<%= image_tag @event.image.url(:thumb) %>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <%= image_tag @event.image.url(:height => "200", :width => "1500", :crop => "fill", :effect => "blur:1000"), :class => "", :width => "100%"%>
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="page-header">
+            <h1><%= @event.title %><br>
+            <small> <%= @event.partner %></small></h1>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <%= link_to 'Back to all events', events_path %>
+        </div>
+      </div>    
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Starts at:</h2>
+          <%= @event.starts_at.to_s(:pretty) %>
+        </div>
+        <div class="col-lg-6">
+          <h2>Location:</h2>
+          <%= @event.location %>
+        </div>
+      </div>
+      <div class="row"> <!-- links -->
+        <div class="col-lg-6">
+          <span class="glyphicon glyphicon-link"></span> <%=link_to(@event.external_url) %>
+          <br>
+          <span class="glyphicon glyphicon-qrcode"></span> <%= link_to('Tickets',@event.ticket_url) %>
+        </div>
+        <div class="col-lg-6">
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Description:</h2>
+          <%= @event.description %>
+        </div>
+      </div>
+      <% if current_user.admin %>
+        <%= link_to 'Edit', edit_event_path(@event) %>
+        <%= image_tag @event.image.url %>
+        <%= image_tag @event.image.url(:medium) %>
+        <%= image_tag @event.image.url(:thumb) %>
+      <% end %>
+    </div>
+  </div>
+</div>
