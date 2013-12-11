@@ -35,3 +35,11 @@
 body{
   background-color: $clouds;
 }
+
+.carousel-inner > .item > img {
+	width: 100%;
+}
+
+#joinin-button {
+	margin-left: 4px
+}
