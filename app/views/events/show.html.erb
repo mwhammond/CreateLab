@@ -40,12 +40,14 @@
           <h2>Description:</h2>
           <%= @event.description %>
         </div>
-      </div>
-      <% if current_user.admin %>
-        <%= link_to 'Edit', edit_event_path(@event) %>
-        <%= image_tag @event.image.url %>
-        <%= image_tag @event.image.url(:medium) %>
-        <%= image_tag @event.image.url(:thumb) %>
+      </div>      
+      <% if signed_in? %>
+        <% if current_user.admin? %>
+          <%= link_to 'Edit', edit_event_path(@event) %>
+          <%= image_tag @event.image.url %>
+          <%= image_tag @event.image.url(:medium) %>
+          <%= image_tag @event.image.url(:thumb) %>
+        <% end %>
       <% end %>
     </div>
   </div>
