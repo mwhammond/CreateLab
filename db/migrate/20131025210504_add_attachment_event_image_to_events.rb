@@ -1,7 +1,7 @@
 class AddAttachmentEventImageToEvents < ActiveRecord::Migration
   def self.up
     change_table :events do |t|
-      t.attachment :event_image
+      t.string :event_image
     end
   end
 

@@ -35,3 +35,7 @@
 body{
   background-color: $clouds;
 }
+
+.carousel-inner > .item > img {
+	width: 100%;
+}
