@@ -36,7 +36,20 @@
 //show Event page
 .showEventPage{
 }
-
+.eventHeadBox{
+  background-color: white;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+}
+.eventHeadTextBox {
+  background-color: white;
+  padding: 25px;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+  //padding: 25px;
+}
+.eventHeadText {
+  padding-left: 25px;
+  //padding: 25px;
+}
 .eventImage{
   height: 200px;
   width: 100%;
