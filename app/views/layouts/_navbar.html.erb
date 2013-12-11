@@ -15,15 +15,16 @@
   <!-- navbar collapse -->
   <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
     <ul class="nav navbar-nav" id="navbarButtons">
-      <li class="active text-center"><%= link_to("Home",root_path)%></li>
-      <li class="text-center"><%= link_to("Events",events_path)%></li>
-      <li class="text-center"><%= link_to("Venture Challenge", venturechallenge_path)%></li>
+      <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'index' %>"><%= link_to("Home",root_path)%></li>
+      <li class="text-center <%= 'active' if params[:controller] == 'events' %>"><%= link_to("Events",events_path)%></li>
+      <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'venturechallenge'  %>"><%= link_to("Venture Challenge", venturechallenge_path)%></li>
 <!--
       <li class="text-center"><%= link_to('Portfolio', portfolios_path) %></li>
       <li class="text-center"><%= link_to('Jobs', jobs_path) %></li>
       <li class="text-center"><a href="/users">Members</a></li>
 -->
       <li class="text-center"><a href="http://forum.imperialcreatelab.com">Forum</a></li>
+      <li class="text-center"><a href="http://blog.imperialcreatelab.com">Blog</a></li>
       <li class="text-center">
       <% if signed_in? %>
       <%= link_to(current_user.email, destroy_user_session_path, :class => "btn btn-warning")%>
