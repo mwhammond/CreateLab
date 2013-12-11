@@ -61,7 +61,8 @@
     </div>
   </div>
 </div>
-<script>      
+<script>
+$(window).load(function(){     
   var $container = $('#container');
   // initialize isotope
   $container.isotope({
@@ -71,6 +72,8 @@
     columnWidth: 120
     }    
   });
+  
+  
   // filter items when filter link is clicked
   $('#filters > label').click(function(){
     console.log("hello");
@@ -79,4 +82,5 @@
     console.log(selector);
     return false;
   });
+});
 </script>
