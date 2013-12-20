@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Createlab::Application.config.secret_key_base = (Rails.env.production? or Rails.env.staging?) ? ENV['SECRET_TOKEN'] : "a"*50
+#Createlab::Application.config.secret_key_base = (Rails.env.production? or Rails.env.staging?) ? ENV['SECRET_TOKEN'] : "a"*50
+Createlab::Application.config.secret_key_base = ENV['SECRET_TOKEN']
