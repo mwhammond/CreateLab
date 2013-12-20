@@ -46,7 +46,7 @@
       <% @events.each do |event| %>
         <div class="isotopeItem <%=event.event_type%>" >
           <div>
-            <img src="<%= event.image.url(:medium)%>">
+            <%= image_tag event.image.url(:medium)%>
           </div>
           <div class="eventTitle titlebackground<%=event.event_type%>">
             <div>
