@@ -1,5 +1,7 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
+require "dotenv/capistrano"
+
 before "deploy:assets:precompile", "bundle:install"
 
 server "95.85.12.242", :web, :app, :db, primary: true

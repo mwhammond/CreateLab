@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', "~> 0.17.0"
 
+#use .env for variables
+gem 'dotenv-rails', :groups => [:development, :test, :production]
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -54,7 +57,7 @@ gem 'rvm-capistrano'
 # gem 'debugger', group: [:development, :test]
 
 # Environment variables
-gem "dotenv", "~> 0.9.0"
+# gem "dotenv", "~> 0.9.0"
 
 group :development do
   gem "better_errors", "~> 1.0.1"
