@@ -1,36 +1,87 @@
 <%= render "public/carousel" %>
-<%= render "public/join_in" %>
-<section class="blackPanel">
+<div class="blackPanel">
+  <%= render "public/join_in" %>
+</div>
+<section>
   <div class="container">
     <div class="row">
-      <h1>The Venture Catalyst Challenge</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-      <br>
-      <h2>Invent The Future</h2>
-      <h3><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</small> </h3>
-      <br>
-      <h2>Get involved early</h2>
-      <h3><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</small> </h3>
-      <br>
-      <h2>Start-up package</h2>
-      <h3><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</small> </h3>
-      <br>
-      <btn class="btn btn-warning btn-lg">Apply</btn>
-      <br>
-      <h2>After VCC</h2>
-      <h3><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</small> </h3>
-      <br>
-      <div class="row">
-        <div class="col-lg-2 col-lg-offset-3">
-          <img src="../../assets/EF-Logo.png" alt="EF-Logo" width="150" height="150" class="img-circle"  />
-        </div>
-        <div class="col-lg-2">
-          <img src="../../assets/seedcamp-logo.jpg" alt="seedcamp-logo" width="150" height="150" class="img-circle"  />
-        </div>
-        <div class="col-lg-2">
-          <img src="../../assets/2013-05-26_techstars_ID_final_bug-with-typeset1.jpg" alt="2013-05-26_techstars_ID_final_bug-with-typeset1" width="150" height="150" class="img-circle" />
-        </div>
+      <div class="col-lg-12">
+        <h1>The Venture Catalyst Challenge</h1>
+        <p class="lead">£20,000 of cash prizes, expert led workshops, high profile mentors and the chance of a lifetime to test out your ideas.</p>
+        <h2>Do you have the makings of an innovator or entrepreneur?<br>
+            Are you working on a group project you’d like to take further?<br>
+            Is your idea the next big thing?</h2>
+        <p>
+          £20,000 in cash prizes (no equity taken, agreements etc.)
+          Access to masterclasses that show you how to really start something
+          1:1 time with experts to get over the difficult stuff (legal, prototyping etc.)
+          Pitch to top investors - last years teams raised over £1.25m
+          Something awesome for the CV even if it doesn't work out.   
+        </p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2" style="padding-top: 30px">
+        <a href="http://www.f6s.com/vcc14" class="btn btn-warning btn-block btn-lg" role="button">Apply now through F6S</a>
+        <h3>Limited to 60 places. Applications close 27th Jan. You can come back to your application at any time.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>How does it work?</h2>
+        <p>
+          The Venture Catalyst Challenge is a ‘pre-accelerator’ program, a non-profit challenge that aims to foster the development of Imperial’s entrepreneurs and get you   ready to start something, join an accelerator or just be even more employable. We take no equity and charge no fees we just want to help students at Imperial turn their ideas into reality.
+        </p>
+        <h2>Who can apply?</h2>
+        <p>
+          All Imperial undergraduates, postgraduates and alumni. Teams are more successful than individuals so check out the other events if you need to find people. Any stage of development but the more you can show that you've done the better.
+        </p>
+        <h2>When?</h2>
+        <p>
+          <ul>
+            <li>7th Dec: Social Innovation bootcamp</li>
+            <li>9th Dec: Online application opens  </li>
+            <li>14th Dec: Startup weekend          </li>
+            <li>22nd January 2014 – Invent the Future: Life, Work and Play. Last chance to generate ideas</li>
+            <li>27th Jan: Applications close       </li>
+            <li>3rd Feb – 17th March: Masterclasses, mentorship and workshops</li>
+            <li>20th March: Pitch day and awards   </li>
+          </ul>
+        </p>
+        <h2>How can I get prepared?</h2>
+        <p>We’ll update this section with a lot more help soon but over xmas the best things to do are:
+          <ol>
+           <li>look out for real problems, don’t try to come up with a cool idea </li>
+           <li>Read Lean Start-up </li>
+           <li>Read ‘The Mom Test’ </li>
+           <li>Learn basic coding </li>
+           <li>Get people excited enough about your idea to join you</li>
+          </ol>
+        </p>
+        <h2>What happens afterwards?</h2>
+        <p>
+          There is an insane amount of help to pursue an idea rather than a typical graduate job. Our friends at the grad program <%= link_to('Entrepreneur First', 'http://www.entrepreneurfirst.org.uk/') %>  are a good bet, we’ve got <%= link_to('Climate KIC', 'http://www.climate-kic.org/') %>  on campus, if it’s finance related maybe <%= link_to('Level39', 'http://level39.co/level39/introduction/') %>  is your thing, consumer facing? Check out <%= link_to('Collider13', 'http://collider12.com/collider13/') %>, if you're building something really cool, we can even help you get on <%= link_to('Kickstarter', 'http://www.kickstarter.com/') %>. Or maybe you're ready for the premier tech accelerator <%= link_to('techstars', 'http://www.techstars.com/') %>.  We will put a full list here soon but there’s plenty of money and help around to support you in trying something straight after you graduate.
+        </p>
+        <h2>Questions?</h2>
+        <p>We’ll get right back to you on the <%= link_to('forum', 'http://forum.imperialcreatelab.com') %></p>
+        <h2>Or, remind me later</h2>
+        <p>Not ready yet but don't want to miss out?</p>
+        <p>Leave your email or join the <%= link_to('facebook community', 'https://www.facebook.com/imperialcreatelab') %>  and we'll alert you nearer the time.</p>
+        <%= render "public/join_in" %>
+      </div>
+    </div>
+<!--
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-3">
+        <%= image_tag('EF-Logo.png')  %>
+      </div>
+      <div class="col-lg-2">
+        <img src="../../assets/seedcamp-logo.jpg" alt="seedcamp-logo" width="150" height="150" class="img-circle"  />
+      </div>
+      <div class="col-lg-2">
+        <img src="../../assets/2013-05-26_techstars_ID_final_bug-with-typeset1.jpg" alt="2013-05-26_techstars_ID_final_bug-with-typeset1" width="150" height="150" class="img-circle" />
+      </div>
+    </div>
+-->
   </div>
 </section>
