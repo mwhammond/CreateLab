@@ -1,5 +1,7 @@
 Createlab::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # Load development .env file
+  Dotenv.load(".env.production")
 
   # Code is not reloaded between requests.
   config.cache_classes = true
