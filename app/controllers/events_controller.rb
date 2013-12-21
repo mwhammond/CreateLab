@@ -5,7 +5,8 @@ class EventsController < ApplicationController
   
   def index
     #@events = Event.order("starts_at ASC")
-    @events = Event.where("starts_at >= '#{Time.now}'")
+    @future_events = Event.where("starts_at >= '#{Time.now}'")
+    @events = @future_events.order("starts_at")
   end
 
   def show
