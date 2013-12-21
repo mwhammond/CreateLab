@@ -1,0 +1,80 @@
+
+
+
+)   ___                              __         
+(__/___)                         ___/__)    /) 
+  /       __   _  _  _/_  _     (, /   _   (/_ 
+ /       / (__(/_(_(_(___(/_      /   (_(_/_)  
+(______)                         (_____        
+                                       )  Bespokely Arranged Pixels circa 2013
+
+
+    The humans.txt file explains the team, technology, and graphic assets 
+    behind this site. Inspired by Google Ventures www.gv.com
+
+_______________________________________________________________________________
+
+PEOPLE
+
+This website was hand-crafted by Imperial Create Lab and NJ Technologies.
+
+Ben Miles
+PhD student at Imperial College, Create Lab doer, runs IC SaaS, likes biotech,
+web development and startups
+www.twitter.com/bennmiles
+
+Mark Hammond
+Head honcho and founder at Imperial Create Lab
+www.twitter.com/iammarkhammond
+
+Thomas Lim
+@EESoc poncho, @icreatelab thinker, @gateme & @peerindex alum. Ride w @techbikers.
+Kinda @imperialcollege (elec eng). Panic when the music stops.
+www.twitter.com/t8lim
+
+Nick Davies
+CEO & Founder, NJ Technologies
+www.dental.ly
+
+James Harker
+CTO & Founder, NJ Technologies
+www.dental.ly
+
+Jonny Wheeler
+Software Engineer, NJ Technologies
+www.dental.ly
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+Ruby on Rails
+rubyonrails.org
+
+Isotope
+isotope.metafizzy.co
+
+SASS
+sass-lang.com
+
+jQuery
+jquery.com
+
+NGINX
+nginx.org
+
+Unicorn
+unicorn.bogomips.org
+
+Capistrano
+http://www.capistranorb.com/
+
+Github
+www.github.com
+
+_______________________________________________________________________________
+
+GRAPHIC ASSETS
+
+Bootstrap
+www.getbootstrap.com
