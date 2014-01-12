@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20131030163753) do
     t.string   "event_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "event_image"
     t.string   "image"
   end
 

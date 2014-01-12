@@ -1,26 +1,34 @@
+
 <p id="notice"><%= notice %></p>
 <div class="showEventPage container">
-<%= link_to 'Back to all events', events_path %>   
+<br>
+<br>
+<%= link_to("Back to all events",events_path)%>
+
   <div class="row">
-    <div class="col-lg-12 eventHeadBox">
-      <div class="row"> <!-- pic -->
-        <%= image_tag @event.image.url(:height => "300", :width => "1500", :crop => "fill", :effect => "blur:1000"), :class => "", :width => "100%"%>
-      </div>
+    <!--
+    <div class="col-lg-6 eventHeadBox">
+      
+      <div class="row"> 
+        <%= image_tag @event.image.url(:crop => "fill", :effect => "blur:1000"), :class => "", :width => "100%"%>
+      </div> 
       <div class="row">
-        <div class="col-lg-10">
+        <div class="col-lg-6">
           <div class="eventHeadText">
             <h3><%= @event.title %><br>
             <small> <%= @event.partner %></small></h3>
           </div>   
         </div>
-      </div> <!-- title  and partner row  -->      
-    </div> 
+      </div>  title  and partner row       
+    </div> --> 
   </div>
   <br>
   <div class="row">
-    <div class="col-lg-12 eventHeadTextBox">
+    <div class="col-lg-6 eventHeadTextBox">
       <div class="row">
         <div class="col-lg-6 eventHeadText">
+                      <h3><%= @event.title %><br>
+            <small> <%= @event.partner %></small></h3>
           <h3>Starts at:</h3>
           <p><%= @event.starts_at.to_s(:pretty) %></p>
         </div>
@@ -36,22 +44,26 @@
           <br>
           <span class="glyphicon glyphicon-qrcode"></span> <%= link_to('Tickets',@event.ticket_url) %>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
         </div>
       </div>
     </div> <!-- /box for links and date -->
   </div>
   <br>
   <div class="row">
-    <div class="eventHeadTextBox">
-      <div class="col-lg-12">
+    <div class="col-lg-6 eventHeadTextBox">
+      <div class="col-lg-6">
         <h3>Description:</h3>
         <p><%= @event.description %></p>
+        <%= link_to('Register here',@event.ticket_url) %>
       </div>
     </div>
-  </div> 
+  </div>
+  <br>
+  <%= link_to("Back to all events",events_path)%>      
 </div>
-<br>       
+<br>  
+
   <% if signed_in? %>
     <% if current_user.admin? %>
       <%= link_to 'Edit', edit_event_path(@event) %>

@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="/">
-      <%= image_tag "createlabmonowhite.png", title: "Imperial Create Lab", width: "200"%>
+      <%= image_tag "createlabmonowhite.png", title: "Imperial Create Lab", width: "150"%>
     </a>
   </div>
   
@@ -24,18 +24,13 @@
       <li class="text-center"><%= link_to('Jobs', jobs_path) %></li>
       <li class="text-center"><a href="/users">Members</a></li>
 -->
+      <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'forum'  %>"><%= link_to("Forum", forum_path)%></li>
+       <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'blog'  %>"><%= link_to("Blog", blog_path)%></li>
+
+<!--
       <li class="text-center"><a href="http://forum.imperialcreatelab.com">Forum</a></li>
       <li class="text-center"><a href="http://blog.imperialcreatelab.com">Blog</a></li>
-      <li class="text-center">
-      <% if signed_in? %>
-      <%= link_to(current_user.email, destroy_user_session_path, :class => "btn btn-warning")%>
-        <% if current_user.admin %>
-          <li><a href="/admin">Admin</a></li>
-        <% end %>
-      <% else %>
-        <%= link_to("Sign-in",new_user_session_path, :class => "btn btn-success")%>
-      <% end %>
-      </li>
+-->
     </ul>        
   </div>   <!-- /navbar collapse -->
 </div>

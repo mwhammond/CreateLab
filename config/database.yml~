@@ -4,8 +4,8 @@ development:
   pool: 25
   encoding: unicode
   host: localhost
-  username: postgres
-  password: 
+  username: 'mark'	
+  password: '9eDR2seD'
 
 test:
   adapter: postgresql
