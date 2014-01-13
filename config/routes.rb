@@ -12,6 +12,8 @@ Createlab::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'public#index'
   get '/venturechallenge' => 'public#venturechallenge'
+  get '/vcc' => 'public#venturechallenge'
+  get '/VCC' => 'public#venturechallenge'
   get '/forum' => 'public#forum'
   get '/blog' => 'public#blog'
     
