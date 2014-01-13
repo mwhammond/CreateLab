@@ -20,7 +20,7 @@
 
 # db config
 #/config/database.yml
-/config/settings.yml
+#/config/settings.yml
 .env.development
 .env.production
 public/uploads/

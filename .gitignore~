@@ -19,7 +19,7 @@
 .DS_Store
 
 # db config
-/config/database.yml
+#/config/database.yml
 /config/settings.yml
 .env.development
 .env.production
