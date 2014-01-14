@@ -3,8 +3,9 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+Createlab::Application.load_tasks
+
 task :promote_admin => :environment do
   User.first.update_attribute('admin', 'admin')
 end
 
-Createlab::Application.load_tasks
