@@ -16,7 +16,7 @@ test:
 
 production:
   adapter: postgresql
-  database: createlab_production
+  database: imperialcreatelab_production
   pool: 25
   encoding: unicode
   host: localhost
