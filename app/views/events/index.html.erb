@@ -8,6 +8,13 @@
       <p>Innovation, hacking, making and entrepreneurship across Imperial. Sign up for a weekly update or click like to follow on facebook</a> and keep up to date.
         <br>
         <br>
+              <% if signed_in? %>
+        <% if current_user.admin %>
+          <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
+
+        <% end %>
+      <% else %>
+      <% end %>
       
               <div class="fb-like" data-href="http://facebook.com/imperialcreatelab" data-width="450" data-show-faces="true" data-send="true"></div>  
       </p>
@@ -28,13 +35,7 @@
 
   <div class="row">
         <div class="col-lg-10 col-md-10 col-sm-10">
-      <% if signed_in? %>
-        <% if current_user.admin %>
-          <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
 
-        <% end %>
-      <% else %>
-      <% end %>
 
 <!--
 
