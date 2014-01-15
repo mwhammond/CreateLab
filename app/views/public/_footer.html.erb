@@ -9,7 +9,7 @@
           <% if signed_in? %>
  -      <%= link_to(current_user.email, destroy_user_session_path, :class => "btn btn-warning")%> 
 -        <% if current_user.admin %>
- -          <li><a href="/admin">Admin</a></li>
+ -          <!-- this linked to admin page but no such page so removed for now -->
  -          <% end %>
  -        <% else %>
  -        <%= link_to("Admin sign-in",new_user_session_path)%>
