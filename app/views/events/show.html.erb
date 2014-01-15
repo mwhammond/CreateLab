@@ -70,6 +70,7 @@
       <%= image_tag @event.image.url %>
       <%= image_tag @event.image.url(:medium) %>
       <%= image_tag @event.image.url(:thumb) %>
+      <%= button_to "delete", @event, :method=>:delete, :class=>:destroy, :confirm => 'Are you sure? Theres no going back!' %>
     <% end %>
   <% end %>
 </div> <!-- container -->
