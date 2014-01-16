@@ -6,11 +6,12 @@
 <%= link_to("Back to all events",events_path)%>
 
   <div class="row">
-    <!--
+    
     <div class="col-lg-6 eventHeadBox">
-      
+    
       <div class="row"> 
-        <%= image_tag @event.image.url(:crop => "fill", :effect => "blur:1000"), :class => "", :width => "100%"%>
+        <%= cl_image_tag @event.image.url(:medium) %>
+        <!--For some reason not passing a paramater doesn't seem to work, I've left the error in in the admin code below-->
       </div> 
       <div class="row">
         <div class="col-lg-6">
@@ -19,8 +20,8 @@
             <small> <%= @event.partner %></small></h3>
           </div>   
         </div>
-      </div>  title  and partner row       
-    </div> --> 
+      </div>       
+    </div>  
   </div>
   <br>
   <div class="row">
@@ -55,7 +56,7 @@
       <div class="col-lg-6">
         <h3>Description:</h3>
         <p><%= @event.description %></p>
-        
+        <%= link_to('Register here',@event.ticket_url) %>
       </div>
     </div>
   </div>
@@ -67,10 +68,12 @@
   <% if signed_in? %>
     <% if current_user.admin? %>
       <%= link_to 'Edit', edit_event_path(@event) %>
+      <%= button_to "delete", @event, :method=>:delete, :class=>:destroy, :confirm => 'Are you sure? Theres no going back!' %>
+      <div class="row">
       <%= image_tag @event.image.url %>
       <%= image_tag @event.image.url(:medium) %>
       <%= image_tag @event.image.url(:thumb) %>
-      <%= button_to "delete", @event, :method=>:delete, :class=>:destroy, :confirm => 'Are you sure? Theres no going back!' %>
+    </div>
     <% end %>
   <% end %>
 </div> <!-- container -->
