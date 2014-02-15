@@ -33,6 +33,7 @@ gem "omniauth-github", "~> 1.1.1"
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails'
 gem 'jquery-rails'
 
+
 # Image uploading
 gem "carrierwave", "~> 0.9.0"
 gem "cloudinary", "~> 1.0.64"

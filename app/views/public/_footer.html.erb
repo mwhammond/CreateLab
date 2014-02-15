@@ -2,18 +2,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-          <p class="text-center footerText">Bespoke pixel arrangements made by Imperial Create Lab and  <a href ="http://njtechnologies.co.uk">NJ Technologies</a>.<br>
+        <p class="text-center footerText">Imperial Create Lab is an Imperial College initiative managed by Imperial Innovations and Imperial Students.
+
+          This site is an open source project built by Imperial Create Lab with the help of <a href ="http://njtechnologies.co.uk">NJ Technologies</a>.<br>
           Find us on <a href="http://www.facebook.com/imperialcreatelab">Facebook</a> and <a href="http://www.twitter.com/icreatelab">Twitter</a>.<br>
           © <%= Time.now.year %> Imperial Create Lab / All rights reserved 
           
           <% if signed_in? %>
- -      <%= link_to(current_user.email, destroy_user_session_path, :class => "btn btn-warning")%> 
--        <% if current_user.admin %>
- -          <!-- this linked to admin page but no such page so removed for now -->
- -          <% end %>
- -        <% else %>
- -        <%= link_to("Admin sign-in",new_user_session_path)%>
- -      <% end %>
+          <%= link_to(current_user.email, destroy_user_session_path, :class => "btn btn-warning")%> 
+          <% if current_user.admin %>
+          <!-- this linked to admin page but no such page so removed for now -->
+          <% end %>
+          <% else %>
+          <%= link_to("Admin sign-in",new_user_session_path)%>
+          <% end %>
         </p>
       </div>
     </div>

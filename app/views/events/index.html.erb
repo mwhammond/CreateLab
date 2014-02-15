@@ -4,91 +4,91 @@
     <div class="col-lg-6 col-md-6 col-sm-6">
 
 
-            <h1>Events</h1>
+      <h1>Events</h1>
       <p>Innovation, hacking, making and entrepreneurship across Imperial. Sign up for a weekly update or click like to follow on facebook</a> and keep up to date.
         <br>
         <br>
-              <% if signed_in? %>
+        <% if signed_in? %>
         <% if current_user.admin %>
-          <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
+        <%= link_to("New Event",new_event_path, :class => "btn btn-warning")%>
 
         <% end %>
-      <% else %>
-      <% end %>
-      
-              <div class="fb-like" data-href="http://facebook.com/imperialcreatelab" data-width="450" data-show-faces="true" data-send="true"></div>  
+        <% else %>
+        <% end %>
+        
+        <div class="fb-like" data-href="http://facebook.com/imperialcreatelab" data-width="450" data-show-faces="true" data-send="true"></div>  
       </p>
 
 
-</div>
+    </div>
 
-  <div class="col-lg-4 col-md-4">
-    <br>
-    <br>
-    <%= render "public/join_in" %>
+    <div class="col-lg-4 col-md-4">
+      <br>
+      <br>
+      <%= render "public/join_in" %>
+    </div>
+
   </div>
-
-</div>
 
 
 
 
   <div class="row">
-        <div class="col-lg-10 col-md-10 col-sm-10">
-
-
-<!--
-
-  <div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10">
 
 
 
 
+      <div class="row">
 
-    <div class="col-lg-12">
-      <div class="btn-group" data-toggle="buttons" id="filters">
-        <label class="btn btn-primary">
-          <input type="radio" name="options" class="filterBtn"  id="all" data-filter="*"> Show all
-        </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" class="filterBtn" id="meet" data-filter=".meetup"> Meetup
-        </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" class="filterBtn" id="skill" data-filter=".skills"> Skill-up
-        </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" class="filterBtn" id="start" data-filter=".startup"> Start-up
-        </label>
-      </div>  
-    </div>
 
- 
 
-    </div>
 
-     -->
 
-  </div>
-</div>
-<br>
-<div id="container">
-      <% @events.each do |event| %>
-        <div class="isotopeItem <%=event.event_type%>" >
-          <div>
-            <%= image_tag event.image.url(:medium)%>
-          </div>
-          <div class="eventTitle titlebackground<%=event.event_type%>">
-            <div>
-              <h3><%= link_to "#{event.title}", event %></h3>
-            </div>
-            <div>
-              <h5><%= event.starts_at.to_s(:pretty) %></h5>
-            </div>
-          </div>
+        <div class="col-lg-12">
+          <div class="btn-group" data-toggle="buttons" id="filters">
+            <label class="btn btn-primary">
+              <input type="radio" name="options" class="filterBtn"  id="all" data-filter="*"> Show all
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" class="filterBtn" id="meet" data-filter=".meetup"> Meetup
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" class="filterBtn" id="skill" data-filter=".skills"> Skill-up
+            </label>
+            <label class="btn btn-primary">
+              <input type="radio" name="options" class="filterBtn" id="start" data-filter=".startup"> Start-up
+            </label>
+          </div>  
         </div>
-      <% end %>
+
+        
+
+      </div>
+
+      
+
     </div>
-<br>
+  </div>
+  <br>
+  <div id="container">
+    <% @events.each do |event| %>
+    <div class="isotopeItem <%=event.event_type%>" >
+      <div>
+        <%= image_tag event.image.url(:medium)%>
+      </div>
+      <div class="eventTitle titlebackground<%=event.event_type%>">
+        <div>
+          <h3><%= link_to "#{event.title}", event %></h3>
+        </div>
+        <div>
+          <h5><%= event.starts_at.to_s(:pretty) %></h5>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <br>
 
 
 </div>
@@ -101,7 +101,7 @@ $(window).load(function(){
     // options...
     itemSelector : '.isotopeItem',
     masonry: {
-    columnWidth: 120
+      columnWidth: 120
     }    
   });
   

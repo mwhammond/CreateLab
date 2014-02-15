@@ -1,22 +1,26 @@
-<%= simple_form_for(@portfolio) do |f| %>
-  <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :company_name %>
-    <%= f.input :bio %>
-    <%= f.input :founded_date %>
-    <%= f.input :amount_raised %>
-    <%= f.input :valuation %>
-    <%= f.input :status %>
-    <%= f.input :contact_name %>
-    <%= f.input :contact_email %>
-    <%= f.input :contact_number %>
-    <%= f.input :industry_sector %>
-    <%= f.input :logo %>
-    <%= f.input :promoted %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+<%= form_for @portfolio do |f| %>
+  <p>
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name %>
+  </p>
+  <p>
+    <%= f.label :bio %>
+    <%= f.text_field :bio %>
+  </p>
+  <p>
+    <%= f.label :founded %>
+    <%= f.datetime_select :founded_date %>
+  </p>
+  <p>
+    <%= f.label :amount_raised %>
+    <%= f.text_field :amount_raised %>
+  </p>
+  <p>
+    <%= f.label :logo %>
+    <%= f.file_field :logo %>
+  </p>
+
+  <p><%= f.button :submit, :class => 'btn btn-success' %></p>
 <% end %>
