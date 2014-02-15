@@ -23,6 +23,8 @@
 /config/settings.yml
 /config/database.yml~
 /config/settings.yml~
+/config/application.rb
+/config/application.rb~
 .env.development
 .env.production
 public/uploads/
@@ -30,3 +32,11 @@ public/uploads/
 # Ignore application configuration
 /config/application.yml
 .env
+.env~
+/config/initializers/secret_token.rb~
+/config/initializers/settings.yml.sample~
+
+
+Gemfile~
+
+

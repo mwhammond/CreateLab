@@ -23,7 +23,6 @@
 /config/settings.yml
 /config/database.yml~
 /config/settings.yml~
-/config/application.rb
 /config/application.rb~
 .env.development
 .env.production
