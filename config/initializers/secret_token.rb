@@ -11,10 +11,10 @@
 # if you're sharing your code publicly.
 Createlab::Application.config.secret_key_base = (Rails.env.production? or Rails.env.staging?) ? ENV['SECRET_TOKEN'] : "a"*50
 
-if Rails.env.development?
-	SETTINGS = YAML.load(IO.read(Rails.root.join("config", "settings.yml")))
-	Createlab::Application.config.secret_key_base = SETTINGS['SECRET_TOKEN']
-end
+#if Rails.env.development?
+	#SETTINGS = YAML.load(IO.read(Rails.root.join("config", #"settings.yml")))
+	#Createlab::Application.config.secret_key_base = SETTINGS#['SECRET_TOKEN']
+#end
 
 
 
