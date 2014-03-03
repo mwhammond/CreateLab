@@ -1,0 +1,29 @@
+
+
+<%= form_for @mentor do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
+    note: about 5 words
+  </p>
+  <p>
+    <%= f.label :sector %>
+    <%= f.text_field :sector %>
+    note: seperate with spaces (e.g. investor, FMCG)
+  </p>
+    <p>
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+    note: must include http://
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </p>
+
+  <p><%= f.button :submit, :class => 'btn btn-success' %></p>
+<% end %>

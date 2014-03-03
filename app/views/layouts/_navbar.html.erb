@@ -26,6 +26,8 @@
       <li class="text-center"><a href="/users">Members</a></li>
     -->
     <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'portfolios'  %>"><%= link_to("Portfolio", portfolios_path)%></li>
+    <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'portfolios'  %>"><%= link_to("Mentors", mentors_path)%></li>
+
     <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'forum'  %>"><%= link_to("Forum", forum_path)%></li>
     <li class="text-center <%= 'active' if params[:controller] == 'public' and params[:action] == 'blog'  %>"><%= link_to("Blog", blog_path)%></li>
 

@@ -83,6 +83,11 @@
         </div>
         <div>
           <h5><%= event.starts_at.to_s(:pretty) %></h5>
+          <% if signed_in? %>
+          <% if current_user.admin %>
+          <%= link_to 'Edit', edit_event_path(event) %>
+          <% end %>
+          <% end %>
         </div>
       </div>
     </div>

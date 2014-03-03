@@ -21,7 +21,6 @@
 @import "events";
 @import "isotope";
 @import "portfolios";
-@import "mentor";
 
 #joinin {
   padding: 25px;

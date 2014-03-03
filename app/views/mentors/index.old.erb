@@ -1,0 +1,27 @@
+<div class="container">
+
+<h1>Portfolio</h1>
+
+<% @promoted.in_groups_of(3).each do |promoted_array| %>
+  <div class="row">
+  <% promoted_array.each do |portfolio| %>
+    <% if portfolio %>
+      <div class="col-lg-4">
+        <%= image_tag(portfolio.logo) %>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Company', new_portfolio_path %>
+
+<br>
+
+<h2>Total Raised</h2>
+<h3><%= number_to_currency(@portfolios.sum(:amount_raised), :unit => "&pound;") %></h3>
+</div>
+
+<br>

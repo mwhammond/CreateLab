@@ -1,22 +1,20 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="col-lg-6 col-md-8 col-sm-8">
 
 
-      <h1>Portfolio</h1>
-      <p>Imperial College student start-ups
+      <h1>Mentors</h1>
+      <p>Just a few of the amazing people that want to help you to create incredible products and services. If you a founder, investor, designer or have sector expertise and want to work with Imperial students get in contact <a href="mailto:mark.hammond@imperialinnovations.co.uk">here</a>. 
         <br>
         <br>
         <% if signed_in? %>
         <% if current_user.admin %>
-        <%= link_to("New Team",new_portfolio_path, :class => "btn btn-warning")%>
+        <%= link_to("New Mentor",new_mentor_path, :class => "btn btn-warning")%>
 
         <% end %>
         <% else %>
         <% end %>
-
-        <div class="fb-like" data-href="http://facebook.com/imperialcreatelab" data-width="450" data-show-faces="true" data-send="true"></div>  
       </p>
 
 
@@ -37,7 +35,7 @@
 <!--
   <div class="row">
 
-IT WOULD BE GREAT TO FILTER THIS BY COHORT AND ORIGIN OF VENTURE BUT REQUIRES CHANGES TO THE SCHEMA
+ENABLE THIS LATER ONCE HAVE A BETTER IDEA OF THE SECTOR TYPES
 
 
 
@@ -68,28 +66,25 @@ IT WOULD BE GREAT TO FILTER THIS BY COHORT AND ORIGIN OF VENTURE BUT REQUIRES CH
 </div>
 <br>
 <div id="container">
-  <% @portfolios.each do |portfolio| %>
+  <% @mentors.each do |mentor| %>
   <div class="isotopeItem startup" >
+
+    <div class="mentorTitle titlebackground">
+      <div>
+        <p><%= link_to "#{mentor.name}", "#{mentor.link}" %></p>
+        <p><%= mentor.desc %></p>
+        <% if signed_in? %>
+        <% if current_user.admin %>
+        <%= link_to 'Edit', edit_mentor_path(mentor) %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+
     <div>
-      <%= image_tag portfolio.logo.url(:medium)%>
+      <%= image_tag mentor.image.url(:medium), height: '150', :class => "mentorImage" %>
     </div>
-    <div class="eventTitle titlebackground">
-      <div>
-        <%if portfolio.link.blank? %>
-        <h3><%=portfolio.company_name%></h3>
-        <%else%>
-        <h3><%= link_to "#{portfolio.company_name}", "#{portfolio.link}" %></h3>
-        <%end%>
-      </div>
-                       <% if signed_in? %>
-                  <% if current_user.admin %>
-                  <%= link_to 'Edit', edit_portfolio_path(portfolio) %>
-                <% end %>
-              <% end %>
-      <div>
-        <%=portfolio.bio %>
-      </div>
-    </div>
+
   </div>
   <% end %>
 </div>
@@ -106,7 +101,8 @@ $(window).load(function(){
     // options...
     itemSelector : '.isotopeItem',
     masonry: {
-      columnWidth: 120
+      layoutMode : 'fitRows', 
+      columnWidth: 10
     }    
   });
   
@@ -119,4 +115,7 @@ $(window).load(function(){
     return false;
   });
 });
+
+
+
 </script>

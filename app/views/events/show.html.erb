@@ -32,9 +32,12 @@
       
       <div class="row"> <!-- links -->
         <div class="col-lg-6 eventHeadText">
-          <span class="glyphicon glyphicon-link"></span> <%=link_to(@event.external_url) %>
+          <% if @event.external_url.empty? %>
+          <% else %>
+          <span class="glyphicon glyphicon-link"></span> <%=link_to('Extra information', @event.external_url) %>
           <br>
-          <span class="glyphicon glyphicon-qrcode"></span> <%= link_to('Tickets',@event.ticket_url) %>
+          <% end %>
+          <span class="glyphicon glyphicon-qrcode"></span> <%= link_to('Tickets', @event.ticket_url) %>
         </div>
         <div class="col-lg-6">
         </div>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @mentor.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mentor.desc %>
+</p>
+
+<p>
+  <strong>Sector:</strong>
+  <%= @mentor.sector %>
+</p>
+
+
+<%= link_to 'Edit', edit_mentor_path(@mentor) %> |
+<%= link_to 'Back', mentors_path %>
